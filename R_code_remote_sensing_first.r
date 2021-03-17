@@ -19,7 +19,7 @@ plot(p224r63_2011) #see the image loaded before
 #colour change= function colorRampPalette
 cl <- colorRampPalette(c("black","grey","light grey"))(100)  
 #the letter c is used to define an array made of the same elements
-#the number 100 = number of levels between the colours
+#the number 100 = number of levels between the colours (define the shades)
 
-#plot the image with new colours: plot(image, col=cl) -> function "col" is used to define the colours
+#plot the image with new colours: plot(image, col=cl) -> function "col" 
 plot(p224r63_2011, col=cl)
