@@ -65,11 +65,29 @@ plotRGB(p224r63_2011, r=4, g=3, b=2, stretch="Lin") #no blue band (what was in t
 plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="Lin") #purple in the image is bare soil
 plotRGB(p224r63_2011, r=3, g=2, b=4, stretch="Lin") #yellow in the image is bare soil
 
-par(mfrow=c(2,2)) #let's put together the images above
+#save an image as .pdf -> function "pdf"
+pdf("il_mio_primo_pdf_con_R.pdf")
+par(mfrow=c(2,2))
 plotRGB(p224r63_2011, r=3, g=2, b=1, stretch="Lin")
-plotRGB(p224r63_2011, r=4, g=3, b=2, stretch="Lin") 
-plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="Lin") 
+plotRGB(p224r63_2011, r=4, g=3, b=2, stretch="Lin")
+plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="Lin")
 plotRGB(p224r63_2011, r=3, g=2, b=4, stretch="Lin")
+dev.off()
+
+#"plotRGB" to plot an image using RGB bands, stretching the bands (histogram stratching function= hist)
+plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="hist")
+
+#par natural colours, false colours and false colours with histogram stratching
+par(mfrow=c(3,1)) 
+plotRGB(p224r63_2011, r=3, g=2, b=1, stretch="Lin")
+plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="Lin")
+plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="hist")
+
+
+
+
+
+
 
 
 
