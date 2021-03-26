@@ -7,12 +7,12 @@ library(raster)
 
 setwd("C:/lab/") #path to folder for Windows (where there are the files we want to use)  
 
-p224r63_2011 <- brick("p224r63_2011_masked.grd") #first image loaded through the function brick
+p224r63_2011 <- brick("p224r63_2011_masked.grd") #first image loaded through the function "brick"
 plot(p224r63_2011) #see the image loaded before
 #B1 = blue
 #B2 = green
 #B3 = red
-#B4 = near IR 
+#B4 = near IR (nir)
 #B5 = middle IR
 #B6 = thermal IR
 
@@ -58,6 +58,20 @@ clr <- colorRampPalette(c("dark red","red","pink"))(100)
 plot(p224r63_2011$B3_sre, col=clr)
 clnir <- colorRampPalette(c("red","orange","yellow"))(100)
 plot(p224r63_2011$B4_sre, col=clnir)
+
+#natural colours: "plotRGB" to plot an image using RGB bands, stretching the bands (Lin= linear function)
+plotRGB(p224r63_2011, r=3, g=2, b=1, stretch="Lin")
+plotRGB(p224r63_2011, r=4, g=3, b=2, stretch="Lin") #no blue band (what was in the red band, now is in nir band)
+plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="Lin") #purple in the image is bare soil
+plotRGB(p224r63_2011, r=3, g=2, b=4, stretch="Lin") #yellow in the image is bare soil
+
+par(mfrow=c(2,2)) #let's put together the images above
+plotRGB(p224r63_2011, r=3, g=2, b=1, stretch="Lin")
+plotRGB(p224r63_2011, r=4, g=3, b=2, stretch="Lin") 
+plotRGB(p224r63_2011, r=3, g=4, b=2, stretch="Lin") 
+plotRGB(p224r63_2011, r=3, g=2, b=4, stretch="Lin")
+
+
 
 
 
