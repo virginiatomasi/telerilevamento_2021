@@ -14,6 +14,6 @@ cl <- colorRampPalette(c("blue","light blue","red", "pink")) (100) #change the c
 plot(fire, col=cl) #plot the image
 
 #modify the size of dataset
-
-
+fireres <-  aggregate(fire, fact=100) #fact=factor, number of pixel aggregated
+plot(fireres, col=cl)
 
