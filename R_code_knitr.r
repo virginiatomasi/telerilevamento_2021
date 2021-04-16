@@ -8,6 +8,7 @@ library(knitr)
 #stitch function
 stitch("R_code_Greenland.r.txt", template=system.file("misc", "knitr-template.Rnw", package="knitr"))
 
+#pdf file in lab folder
 
 #if problems appear:
 #install.packages("tinytex")
