@@ -32,7 +32,7 @@ import #show the files
 TGr <- stack(import)
 plot(TGr) #now in TGr file we have all the images
 
-------------------------------------------------------------------
+#new lesson------------------------------------------------------------------
 #install.packages("raster")
 #install.packages("rasterVis")
 library(raster)
