@@ -23,7 +23,7 @@ sun <- brick("sun.png")
 sunC <- unsuperClass(sun, nClasses=3)
 plot(sunC$map)
 
---------------------------------------------------------------------------------------
+#new lesson--------------------------------------------------------------------------------------
 #Grand Canyon analysis
 
 library(raster)
