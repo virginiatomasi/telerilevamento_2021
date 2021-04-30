@@ -49,6 +49,11 @@ ndvi2 <- (defor2$defor2.1 - defor2$defor2.2)/(defor2$defor2.1 + defor2$defor2.2)
 #ndvi2 <- dvi2/(defor2$defor2.1 + defor2$defor2.2) gives the same result
 plot(ndvi2, col=cl, main="NDVI at time 2")
 
+#NDVI between the two moments
+difndvi <- ndvi1 - ndvi2
+plot(difndvi, col=cld)
+
+
 
 
 
@@ -60,3 +65,4 @@ plot(vi$NDWI, col=cl) #NDWI: normalized difference water index, related to the p
 vi2 <- spectralIndices(defor2, green=3, red=2, nir=1)
 plot(vi2, col=cl) #show all the indices
 plot(vi2$NDWI, col=cl)
+
